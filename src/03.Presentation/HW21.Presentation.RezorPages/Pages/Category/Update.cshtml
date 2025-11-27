@@ -1,0 +1,36 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Category.UpdateModel
+@{
+}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ایجاد دسته‌بندی</title>
+    <link rel="stylesheet" href="~/css/category.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>ویرایش دسته‌بندی</h2>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="CategoryDto.Name">نام دسته‌بندی</label>
+                <input asp-for="CategoryDto.Name" required>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CategoryDto.Description">توضیحات</label>
+                <textarea asp-for="CategoryDto.Description"></textarea>
+            </div>
+
+            <button type="submit">ثبت تغییرات</button>
+        </form>
+        <div class="message-box">
+            <p>
+                @Model.Message
+            </p>
+        </div>
+    </div>
+</body>
+</html>

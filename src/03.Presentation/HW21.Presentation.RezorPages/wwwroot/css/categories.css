@@ -1,0 +1,70 @@
+
+/* ?? ????? ? ???? ????? ???? */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .page-header h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+/* ?? ???? ?????? ???? ???? */
+.add-btn {
+    background: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    width: 250px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .add-btn:hover {
+        background: #27ae60;
+    }
+
+/* ?? ??????? */
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .card h3 {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    /* ?? ???????? ???? ???? */
+    .card button {
+        border: none;
+        background: #3498db;
+        color: #fff;
+        padding: 10px 18px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .card button:hover {
+            background: #217dbb;
+        }

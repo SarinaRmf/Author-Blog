@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/framework/">
+    <Project Path="framework/HW21.Framework/HW21.Framework.csproj" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/01.Domain/" />
+  <Folder Name="/src/01.Domain/Core/">
+    <Project Path="src/01.Domain/Core/HW21.Domain.Core/HW21.Domain.Core.csproj" />
+  </Folder>
+  <Folder Name="/src/01.Domain/Service/">
+    <Project Path="src/01.Domain/Service/HW21.Domain.Service.ApplicationServices/HW21.Domain.Service.ApplicationServices.csproj" />
+    <Project Path="src/01.Domain/Service/HW21.Domain.Service/HW21.Domain.Service.Services.csproj" />
+  </Folder>
+  <Folder Name="/src/02.Infrastraucture/" />
+  <Folder Name="/src/02.Infrastraucture/Data Access/">
+    <Project Path="src/02.Infrastructure/Data Access/HW21.Infra.Data.Repos.Ef/HW21.Infra.Data.Repos.Ef.csproj" />
+  </Folder>
+  <Folder Name="/src/02.Infrastraucture/Db/">
+    <Project Path="src/02.Infrastructure/Db/HW21.Infra.Db.SqlServer.Ef/HW21.Infra.Db.SqlServer.Ef.csproj" />
+  </Folder>
+  <Folder Name="/src/03.Presentation/">
+    <Project Path="src/03.Presentation/HW21.Presentation.RezorPages/HW21.Presentation.RezorPages.csproj" />
+  </Folder>
+</Solution>

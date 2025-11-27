@@ -1,0 +1,169 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+.post-card {
+    width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    direction: rtl;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    color: #333;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+.post-title {
+    margin: 15px 12px 5px;
+    font-size: 20px;
+    color: #222;
+}
+
+.post-content {
+    margin: 0 12px 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 10px;
+    font-size: 13px;
+}
+
+.date {
+    color: gray;
+}
+
+.category {
+    color: #3498db;
+    font-weight: bold;
+}
+.post-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #3498db;
+}
+.edit-btn:hover {
+    background: #217dbb;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+.delete-btn:hover {
+    background: #c0392b;
+}
+.add-post-btn {
+    width: 400px; /* برابر عرض کارت */
+    display: block;
+    margin: 20px auto; /* وسط چین */
+    padding: 12px 0;
+    background: #2ebccc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.add-post-btn:hover {
+    background: #2785ae;
+}
+.wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: stretch; /* مهم: باعث میشه سایدبار و کانتینر به یک ارتفاع باشند */
+    min-height: 100vh; /* حداقل ارتفاع برابر با ارتفاع صفحه */
+}
+
+/* سایدبار سمت راست */
+.sidebar {
+    width: 250px;
+    position: fixed; /* ثابت روی صفحه */
+    right: 20px; /* فاصله از راست صفحه */
+    top: 20px;   /* فاصله از بالای صفحه */
+    height: calc(100vh - 40px); /* ارتفاع سایدبار برابر با ارتفاع صفحه منهای top/bottom padding */
+    border-left: 1px solid #dcdcdc;
+    padding-left: 25px;
+    overflow-y: auto; /* اگر محتوا زیاد شد، اسکرول داخلی */
+   
+}
+
+/* محتوای اصلی */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    flex: 1;
+}
+
+
+
+/* کارت داخلی سایدبار */
+.card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 18px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card button:hover {
+    background: #217dbb;
+}

@@ -1,0 +1,44 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Account.RegisterModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/Register.css">
+</head>
+
+<div class="container">
+    <div class="card">
+        <h2>ایجاد حساب جدید</h2>
+
+        <form asp-action="Register" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label asp-for="authorDto.Username">نام کاربری</label>
+                <input asp-for="authorDto.Username" type="text" placeholder="مثلاً: sara" required />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="authorDto.Email">ایمیل</label>
+                <input asp-for="authorDto.Email" type="email" placeholder="example@domain.com" required />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="authorDto.Password">رمز عبور</label>
+                <input asp-for="authorDto.Password" type="password" placeholder="رمز عبور" required />
+            </div>
+
+
+            <button class="btn" type="submit">ثبت ‌نام</button>
+
+            <p class="text-link">
+                حساب کاربری دارید؟ <a asp-page="Login">ورود به حساب کاربری</a>
+            </p>
+
+        </form>
+        <div class="message-box">
+            <p>
+                @ViewBag.RegisterError
+            </p>
+        </div>
+    </div>
+</div>

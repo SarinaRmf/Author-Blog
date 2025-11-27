@@ -1,0 +1,92 @@
+﻿.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    padding: 20px;
+}
+
+.card {
+    width: 450px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(20,30,60,0.08);
+    padding: 24px;
+}
+
+    .card h2 {
+        font-size: 20px;
+        margin-bottom: 14px;
+        text-align: center;
+        color: #1f2937;
+    }
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #374151;
+    text-align: right;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    background: #3b82f6;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+    .btn:hover {
+        background: #2563eb;
+    }
+
+.text-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #374151;
+}
+
+    .text-link a {
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+        .text-link a:hover {
+            text-decoration: underline;
+        }
+
+.message-box {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #dc2626;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+}

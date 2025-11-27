@@ -1,0 +1,52 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Post.EditPostModel
+@{
+}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <link rel="stylesheet" href="~/css/createPost.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>ایجاد پست جدید</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-flex">
+                <div class="form-left">
+
+                    <input asp-for="updatedPost.Id" type="hidden" />
+                    <label>عنوان </label>
+                    <input type="text" asp-for="updatedPost.Title"required>
+
+                    <label for="content">متن اصلی</label>
+                    <textarea asp-for="updatedPost.Description" rows="6" placeholder="متن پست را اینجا بنویسید" required></textarea>
+
+                    <label>دسته‌بندی</label>
+                    <select asp-for="updatedPost.CategoryId" required>
+                        <option value="" readonly>انتخاب دسته‌بندی</option>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-right">
+                    <label class="upload-box">
+                        <div class="upload-content">آپلود تصویر</div>
+                        <input type="file" asp-for="updatedPost.ImageFile"  accept="image/*">
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">ایجاد پست</button>
+        </form>
+        <div class="message-box">
+            <p>
+                @Model.Message
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

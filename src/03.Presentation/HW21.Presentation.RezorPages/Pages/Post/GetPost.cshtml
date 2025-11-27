@@ -1,0 +1,38 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Post.GetPostModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/userposts.css">
+</head>
+<body>
+
+    <div class="container">
+        
+            <div class="post-card">
+                <div class="author">نویسنده: @Model.SelectedPost.AuthorName</div>
+
+            <img class="post-image" src="@Model.SelectedPost.ImagePath" alt="post">
+
+            <h2 class="post-title">@Model.SelectedPost.Title</h2>
+
+                <p class="post-content">
+                @Model.SelectedPost.Description
+                </p>
+                <div class="post-footer">
+                <span class="category">#@Model.SelectedPost.CategoryName</span>
+                <span class="date">@Model.SelectedPost.CreatedAt</span>
+                </div>
+            </div>
+        
+
+    </div>
+    
+   
+</body>
+</html>

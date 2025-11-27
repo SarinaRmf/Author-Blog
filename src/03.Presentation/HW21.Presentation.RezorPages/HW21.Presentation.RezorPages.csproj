@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01.Domain\Service\HW21.Domain.Service.ApplicationServices\HW21.Domain.Service.ApplicationServices.csproj" />
+    <ProjectReference Include="..\..\01.Domain\Service\HW21.Domain.Service\HW21.Domain.Service.Services.csproj" />
+    <ProjectReference Include="..\..\02.Infrastructure\Data Access\HW21.Infra.Data.Repos.Ef\HW21.Infra.Data.Repos.Ef.csproj" />
+    <ProjectReference Include="..\..\02.Infrastructure\Db\HW21.Infra.Db.SqlServer.Ef\HW21.Infra.Db.SqlServer.Ef.csproj" />
+  </ItemGroup>
+
+</Project>

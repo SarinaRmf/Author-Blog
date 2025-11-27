@@ -1,0 +1,39 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Category.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cards</title>
+    <link rel="stylesheet" href="~/css/categories.css">
+</head>
+
+<body>
+
+    <div class="card-container" style="flex-direction:column;">
+
+        <div class="page-header">
+            <h2>دسته‌بندی ها</h2>
+            <a asp-page="Create"><button class="add-btn">افزودن دسته بندی جدید</button></a>
+        </div>
+        <div class="card-container">
+            @foreach (var category in Model.Categories)
+            {
+                <div class="card">
+                    <h3>@category.Name</h3>
+                    <div>
+                        <a asp-page-handler="Delete" asp-route-Id="@category.Id"><button style="background-color: red;">حذف</button></a>
+                        <a asp-page="Update" asp-route-Id="@category.Id"><button>ویرایش</button></a>
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+
+</body>
+
+</html>

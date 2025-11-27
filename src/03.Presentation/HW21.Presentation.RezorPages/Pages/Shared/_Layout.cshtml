@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+</head>
+<body>
+
+    <!-- ▬▬▬▬ Navbar ▬▬▬▬ -->
+    <header>
+        <nav class="navbar">
+
+            <ul class="nav-links">
+                <li><a asp-page="/Home/Index">صفحه اصلی</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+
+            <div class="nav-left">
+                <a asp-page="/Account/Login"><button class="login-btn">ورود</button></a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ▬▬▬▬ محتوا ـ هر صفحه اینجا لود میشه ▬▬▬▬ -->
+    <main>
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+    </main>
+
+
+    <!-- ▬▬▬▬ Footer ▬▬▬▬ -->
+    <footer>
+        <p>© 2025 - HW20 وبلاگ نویسندگان</p>
+    </footer>
+
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

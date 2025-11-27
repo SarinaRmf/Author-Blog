@@ -1,0 +1,53 @@
+﻿@page
+@model HW21.Presentation.RezorPages.Pages.Post.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/userposts.css">
+</head>
+<body>
+
+    <div class="container">
+        <a asp-page="CreatePost" style="text-decoration: none;"><button class="add-post-btn">➕ افزودن پست جدید</button></a>
+        
+        @foreach(var post in Model.Posts)
+        {
+            <div class="post-card">
+                <div class="author">نویسنده: @post.AuthorName</div>
+
+                <img class="post-image" src="@post.ImagePath" alt="post">
+
+                <h2 class="post-title">@post.Title</h2>
+
+                <p class="post-content">
+                    @post.Description
+                </p>
+
+                <div class="post-buttons">
+                    <a style="text-decoration: none;" asp-page="EditPost" asp-route-postId="@post.Id"><button class="edit-btn">ویرایش</button></a>
+                    <a style="text-decoration: none;" asp-route-postId="@post.Id" asp-page-handler="Delete"><button class="delete-btn">حذف</button></a>
+                </div>
+
+                <div class="post-footer">
+                    <span class="category">#@post.CategoryName</span>
+                    <span class="date">@post.CreatedAt</span>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="sidebar">
+        <div class="card" style="margin-top: 75px">
+            <img src="~/images/images.png" alt="image">
+            <h3>مدیریت دسته بندی ها</h3>
+            <a asp-page="/Category/Index"><button>مشاهده</button></a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
