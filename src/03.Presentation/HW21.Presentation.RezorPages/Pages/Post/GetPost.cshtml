@@ -3,36 +3,80 @@
 @{
 }
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="~/css/userposts.css">
+    <title>نمایش پست و نظرات</title>
+    <link rel="stylesheet" href="~/css/postAndComment.css">
+    
 </head>
-<body>
 
+<body>
     <div class="container">
         
-            <div class="post-card">
-                <div class="author">نویسنده: @Model.SelectedPost.AuthorName</div>
-
+        <div class="post-card">
+            <div class="author">نویسنده: @Model.SelectedPost.AuthorName</div>
             <img class="post-image" src="@Model.SelectedPost.ImagePath" alt="post">
-
             <h2 class="post-title">@Model.SelectedPost.Title</h2>
-
-                <p class="post-content">
-                @Model.SelectedPost.Description
-                </p>
-                <div class="post-footer">
+            <p class="post-content">@Model.SelectedPost.Description</p>
+            <div class="post-footer">
                 <span class="category">#@Model.SelectedPost.CategoryName</span>
                 <span class="date">@Model.SelectedPost.CreatedAt</span>
-                </div>
             </div>
-        
+        </div>
 
+        
+        <div class="comment-form-container">
+            <h3 class="comment-form-title">ثبت نظر شما</h3>
+            <form class="comment-form" method="post">
+                <div class="input-row">
+                    <input type="hidden" asp-for="CreateCommentDto.PostId" value="@Model.SelectedPost.Id" />
+                    <input type="text" placeholder="نام" class="small-input" asp-for="CreateCommentDto.FirstName">
+                    <input type="text" placeholder="نام خانوادگی" class="small-input" asp-for="CreateCommentDto.LastName">
+                    <input type="email" placeholder="ایمیل" class="medium-input" asp-for="CreateCommentDto.Email">
+                </div>
+                <div class="comment-bottom-row">
+                    <textarea placeholder="متن پیام ..." class="message-input" asp-for="CreateCommentDto.Text"></textarea>
+                    <select class="rate-dropdown" asp-for="CreateCommentDto.Rate">
+                        <option disabled selected>امتیاز</option>
+                        <option value="1">* 1</option>
+                        <option value="2">** 2</option>
+                        <option value="3">*** 3</option>
+                        <option value="4">**** 4</option>
+                        <option value="5">*****5</option>
+                    </select>
+                </div>
+                <button class="submit-btn">ثبت نظر</button>
+            </form>
+        </div>
+
+        
+        <div class="comment-box">
+            <div class="comments-list">
+                <h4>لیست کامنت‌ها</h4>
+
+                @if(Model.Comments.Count != 0)
+                {
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="fullname">@comment.FirstName @comment.LastName</span>
+                                <span class="email">@comment.Email</span>
+                                <span class="rate">Rate: @comment.Rate/5</span>
+                            </div>
+                            <p class="message">@comment.Text</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p style="color: red;">نظری وجود ندارد</p>
+                }
+
+            </div>
+        </div>
     </div>
-    
-   
 </body>
 </html>

@@ -73,7 +73,7 @@ namespace HW21.Infra.Data.Repos.Ef
         {
             var result = _context.Categories
                 .Where(c => c.Id == CategoryDto.Id)
-                .ExecuteUpdateAsync(setters => setters
+                .ExecuteUpdate(setters => setters
                 .SetProperty(c => c.Name, CategoryDto.Name)
                 .SetProperty(c => c.Description, CategoryDto.Description)
                 .SetProperty(c => c.UptatedAt, DateTime.Now));

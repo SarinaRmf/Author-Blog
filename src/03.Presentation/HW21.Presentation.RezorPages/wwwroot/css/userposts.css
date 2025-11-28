@@ -114,7 +114,7 @@
 
 /* سایدبار سمت راست */
 .sidebar {
-    width: 250px;
+    width: 200px;
     position: fixed; /* ثابت روی صفحه */
     right: 20px; /* فاصله از راست صفحه */
     top: 20px;   /* فاصله از بالای صفحه */
@@ -164,6 +164,66 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .card button:hover {
     background: #217dbb;
 }
+
+
+.post-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+
+/* دکمه‌های ویرایش و حذف سمت راست */
+.right-buttons {
+    display: flex;
+    gap: 10px;
+
+}
+.comment-btn {
+    margin-left: auto; /* دکمه را به سمت چپ هل می‌دهد */
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+    .comment-btn:hover {
+        background: #217dbb;
+    }
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #3498db;
+}
+
+    .edit-btn:hover {
+        background: #217dbb;
+    }
+
+.delete-btn {
+    margin-left: 10px;
+    background: #e74c3c;
+}
+
+    .delete-btn:hover {
+        background: #c0392b;
+    }

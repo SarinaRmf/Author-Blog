@@ -1,0 +1,251 @@
+﻿
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: sans-serif;
+    background: #f2f2f2;
+    padding-bottom: 40px;
+}
+
+/* پست */
+.post-card {
+    width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    padding-bottom: 10px;
+    direction: rtl;
+}
+
+.author {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.post-title {
+    margin: 15px 12px 5px;
+    font-size: 20px;
+    color: #222;
+}
+
+.post-content {
+    margin: 0 12px 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 10px;
+    font-size: 13px;
+}
+
+.category {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.date {
+    color: gray;
+}
+
+/* فرم ثبت نظر */
+.comment-form-container {
+    width: 500px;
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    direction: rtl;
+}
+
+.comment-form-title {
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.small-input {
+    width: 32%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.medium-input {
+    width: 34%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.comment-bottom-row {
+    display: flex;
+    gap: 10px;
+}
+
+.message-input {
+    width: 75%;
+    height: 60px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    resize: none;
+}
+
+.rate-dropdown {
+    width: 25%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 60px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 12px;
+    background: #3498db;
+    color: white;
+    padding: 9px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+    .submit-btn:hover {
+        background: #247dc2;
+    }
+
+/* نمایش کامنت‌ها */
+.comment-box {
+    width: 500px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    direction: rtl;
+}
+
+.comments-list {
+    margin-top: 10px;
+}
+
+    .comments-list h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+    }
+
+.comment {
+    background: #fdfdfd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-right: 4px solid #2ebccc;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.fullname {
+    font-weight: bold;
+    color: #1c6dd0;
+}
+
+.email {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.rate {
+    color: #ffb400;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.message {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+}
+/* ------- وضعیت + دکمه تایید ------- */
+.comment-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+    .status.pending {
+        background: #ffe9b5;
+        color: #8a6200;
+    }
+
+    .status.approved {
+        background: #c9ffd3;
+        color: #0f6f1d;
+    }
+
+.approve-btn {
+    background: #1fb448;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+    .approve-btn:hover {
+        background: #169837;
+    }
+
+.status.rejected {
+    background: #ffb8b8;
+    color: #b10000;
+}
+.reject-btn {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+    .reject-btn:hover {
+        background: #b52b27;
+    }

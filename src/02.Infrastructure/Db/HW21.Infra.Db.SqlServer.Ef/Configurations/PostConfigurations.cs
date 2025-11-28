@@ -20,6 +20,11 @@ namespace HW21.Infra.Db.SqlServer.Ef.Configurations
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.HasMany(p => p.Comments)
+                .WithOne(c => c.Post)
+                .HasForeignKey(c => c.PostId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             builder.Property(p => p.Title).HasMaxLength(255);
             builder.Property(p => p.Description).HasMaxLength(1000);
 

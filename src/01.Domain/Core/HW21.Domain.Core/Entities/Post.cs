@@ -13,5 +13,6 @@ namespace HW21.Domain.Core.Entities
         public int CategoryId { get; set; }
         public Author Author { get; set; }
         public int AuthorId { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

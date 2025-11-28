@@ -29,8 +29,20 @@
                 </p>
 
                 <div class="post-buttons">
-                    <a style="text-decoration: none;" asp-page="EditPost" asp-route-postId="@post.Id"><button class="edit-btn">ویرایش</button></a>
-                    <a style="text-decoration: none;" asp-route-postId="@post.Id" asp-page-handler="Delete"><button class="delete-btn">حذف</button></a>
+                    <div class="left-buttons">
+                        <a asp-page="/Comment/Index" asp-route-postId="@post.Id">
+                            <button class="comment-btn">کامنت‌ها</button>
+                        </a>
+                    </div>
+
+                    <div class="right-buttons">
+                        <a asp-page="EditPost" asp-route-postId="@post.Id">
+                            <button class="edit-btn">ویرایش</button>
+                        </a>
+                        <a asp-page-handler="Delete" asp-route-postId="@post.Id">
+                            <button class="delete-btn">حذف</button>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="post-footer">
@@ -41,12 +53,14 @@
         }
 
     </div>
-    <div class="sidebar">
-        <div class="card" style="margin-top: 75px">
+    <div class="sidebar" style="margin-top: 75px">
+        <div class="card">
             <img src="~/images/images.png" alt="image">
             <h3>مدیریت دسته بندی ها</h3>
             <a asp-page="/Category/Index"><button>مشاهده</button></a>
         </div>
+
+
     </div>
     </div>
 </body>
